@@ -1,0 +1,3 @@
+docker run -dit -p 7000:9380 --user=1001:1001 -v $DOCKER_VOLUMES/nostr/data:/usr/src/app/db:Z \
+  -v $(pwd)/config.toml:/usr/src/app/config.toml:ro,Z \
+  --name nostr-relay nostr-rs-relay:latest
